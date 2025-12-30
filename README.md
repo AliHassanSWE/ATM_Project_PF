@@ -45,6 +45,14 @@ AccountID,FullName,PIN,PhoneNumber,Balance
 33572,Ali Hassan,1111,03001234567,30000
 233573,Dr. Nauman Riaz,2222,03007654321,15000
 ```
+##  Note on .gitignore
+
+You will notice that `users.csv` and `.exe` files are missing from this repository. This is intentional:
+
+1.  **`users.csv`**: Ignored for security. Your local machine will store your own private data separate from the public code. Means when different user use this project
+they will not see others csv file they will see their own csv file.
+3.  **`.exe`**: Ignored to force a fresh compilation on your system, preventing errors from mismatched file versions.
+   ==========<<<<<<<===================
 ##  How to Run
 
 This project consists of multiple C++ source files (`main.cpp`, `admin_logic.cpp`, `user_logic.cpp`, `helper_logic.cpp`) that need to be linked and compiled together.
