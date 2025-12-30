@@ -1,8 +1,8 @@
 # ATM Management System – Programming Fundamentals Project
 
-A complete console-based ATM Management System built in C++ that simulates real-world banking operations. This project uses file handling (CSV) to store user data permanently and features distinct panels for Users and Administrators.
+A complete console-based ATM Management System built in C++ that work like  real-world banking operations. This project uses file handling (CSV) to store user data permanently and features distinct panels for Users and Administrators.
 
-====={{{{{{{{=========
+##======§§§§§§§§§=========
 
 ## 🔗 Student Information
 
@@ -12,7 +12,7 @@ A complete console-based ATM Management System built in C++ that simulates real-
 * **Instructor:** Dr. Nauman Riaz
 * **Course:** Programming Fundamentals (CS-102)
 
-=======•==•====•==•=======
+##=======•==•====•==•=======
 
 ##  Project Overview
 
@@ -26,7 +26,7 @@ This project demonstrates core programming concepts including **File I/O**, **Fu
 * **Transactions:** Deposit and Withdraw funds with real-time balance updates.
 * **Account Management:** Users can view their details and update their profiles.
 
-#### 🛠 Admin Panel
+#### Admin Panel
 * **Dashboard:** View all registered users in the database.
 * **Edit User:** Admins can modify User Names, PINs, and Phone Numbers.
 * **Search & Delete:** specific tools to manage database records by Account Number.
@@ -57,14 +57,23 @@ Included in the repository is a Windows Batch file named `run.bat`. This script 
     * Compile all `.cpp` files using `g++`.
     * Clean up old build files.
     * Launch the `ATM_System.exe` immediately.
-#===========^^^^==========
+    * 
+##===========^^^^==========
      
 ###  Method 2: Manual Compilation (Terminal)
 If you wish to compile the code manually via VS Code Terminal or Command Prompt, use the following command to link all logic files:
 
 **1. Compile the Source Code:**
-bash copy the line below amd paste in terminal amd press enter. it will complie files
-``` g++ main.cpp admin_logic.cpp user_logic.cpp helper_logic.cpp -o ATM_System```
-#( Important) 
-After that must paste this line to run the project in the same terminal
-```ATM_System.exe```
+Copy the block below, paste it into your terminal, and press enter.
+
+```bash
+g++ main.cpp admin_logic.cpp user_logic.cpp helper_logic.cpp -o ATM_System
+```
+
+2. ##(Important)
+3. After that, run the project with this command:
+
+```bash
+./ATM_System.exe
+```
+
