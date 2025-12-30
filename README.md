@@ -7,16 +7,16 @@ A complete console-based ATM Management System built in C++ that simulates real-
 ## 🔗 Student Information
 
 * **Name:** Ali Hassaan
-* **Section:** A (Morning)
+* **Section:** BSCS_**A** (Morning)
 * **Roll No.:** 25021519-119
 * **Instructor:** Dr. Nauman Riaz
-* **Course:** Programming Fundamentals
+* **Course:** Programming Fundamentals (CS-102)
 
 =======•==•====•==•=======
 
 ##  Project Overview
 
-This project demonstrates core programming concepts including **File I/O**, **Functions**, **Loops**, and **Conditional Logic**. It serves as a secure banking simulation where users can create accounts, withdraw/deposit money, and manage their security settings, while administrators can manage the entire database.
+This project demonstrates core programming concepts including **File I/O**, **Functions**, **Loops**, and **Conditional Logic** **File handling ** . It serves as a secure banking simulation where users can create accounts, withdraw/deposit money, and manage their security settings, while administrators can manage the entire project.
 
 ### Key Features
 
