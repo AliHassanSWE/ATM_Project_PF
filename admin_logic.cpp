@@ -19,6 +19,8 @@ void adminMenu() {
             case 3: deleteUser(); break;
             case 4: editUser(); break;
             case 5: resetUserPin(); break;
+            case 0: cout << "Logging out...\n"; break;
+            default: cout << "Invalid choice! Try again.\n"; 
         }
     } while (choice != 0);
 }
@@ -175,7 +177,7 @@ void resetUserPin() {
     rename("temp.csv", "users.csv");
 
     if (!found) {
-        cout << "Account not found!" << endl;
+        cout << " Account not found!" << endl;
     }
     system("pause");
 }

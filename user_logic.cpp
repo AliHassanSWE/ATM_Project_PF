@@ -28,7 +28,7 @@ void showMainMenu() {
 void signup() {
     string name, pin, phone, accountNum;
     int initialBalance;
-    cout << "\n--- CREATE ACCOUNT ---\n";
+    cout << "\n===== CREATE ACCOUNT ======\n";
     int randomID = 10000 + (rand() % 90000); 
     accountNum = to_string(randomID);
     cout << "Enter FULL Name: "; 
@@ -98,7 +98,9 @@ void login() {
     const int MAX_ATTEMPTS = 5;
 
     while (attempts < MAX_ATTEMPTS) {
-        cout << "\n--- CUSTOMER LOGIN ---" << endl;
+        cout << "====================================";
+        cout << "\n====CUSTOMER LOGIN ====" << endl;
+        cout << "=====================================" << endl;
         cout << "Enter Account Number: "; cin >> inputAcc;
         cout << "Enter PIN (Attempt " << (attempts + 1) << " of " << MAX_ATTEMPTS << "): "; cin >> inputPin;
 
@@ -123,9 +125,10 @@ void login() {
 
         attempts++;
         if (attempts < MAX_ATTEMPTS) {
-            cout << "Wrong Credentials! " << (MAX_ATTEMPTS - attempts) << " attempts remaining." << endl;
-            cout << "Forgot PIN? (y/n): ";
+            cout << "Wrong PIN! " << (MAX_ATTEMPTS - attempts) << " attempts remaining." << endl;
+            cout << "Forgot PIN? (yes/no): ";
             char choice; cin >> choice;
+            cin.ignore(1000, '\n');
             if (choice == 'y' || choice == 'Y') {
                 forgotPin(); // Calling the function we defined above
                 return;
@@ -140,7 +143,11 @@ void login() {
 void userMenu(string accNum, string name, string pin, string phone, int balance) {
     int choice, amount;
     do {
-        cout << "\nWelcome " << name << "!\n1. Balance\n2. Withdraw\n3. Deposit\n0. Logout\nChoice: ";
+        cout << "\n=========================" << endl;
+        cout << "\n****** USER MENU ********" << endl;
+        cout << "=========================" << endl;
+        cout << "\nWelcome " << name << "!" << endl;
+        cout << "1. Check Balance\n2. Withdraw Amount \n3. Deposit Cash\n0. Logout\nChoice: ";
         cin >> choice;
         if (choice == 1) cout << "Balance: " << balance << endl;
         else if (choice == 2) {
