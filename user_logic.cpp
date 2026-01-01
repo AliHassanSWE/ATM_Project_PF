@@ -9,6 +9,7 @@ void showMainMenu() {
         cout << "1. Customer Login\n";
         cout << "2. Create New Account (Signup)\n";
         cout << "3. Admin Login\n";
+        cout << "4. Forgot PIN\n";
         cout << "0. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
@@ -17,6 +18,7 @@ void showMainMenu() {
             case 1: login(); break;
             case 2: signup(); break;
             case 3: adminLogin(); break;
+            case 4: forgotPin(); break;
             case 0: cout << "Exiting... Goodbye!\n"; break;
             default: cout << "Invalid choice!\n";
         }
@@ -45,16 +47,48 @@ void signup() {
         file.close();
     }
 }
-//
-void forgotPin() {
-    string inputAcc, inputPhone, newPin;
-    cout << "\n--- RESET PIN ---" << endl;
-    cout << "Enter Account Number: "; cin >> inputAcc;
-    cout << "Enter Registered Phone: "; cin >> inputPhone;
 
-    // Logic to verify identity
-    cout << "Identity Verified! Enter new 4-digit PIN: "; cin >> newPin;
-    cout << "PIN updated successfully " << endl;
+void forgotPin() {
+    system("cls");
+    string searchAcc, searchPhone;
+    string acc, name, pin, phone, balance; 
+    bool found = false;
+
+    cout << "Enter Your Account Number: ";
+    cin >> searchAcc;
+    cout << "Enter Your Registered Phone Number: ";
+    cin >> searchPhone;
+
+    ifstream inFile("users.csv");
+    if (!inFile) {
+        cout << "Error: users.csv file not found!" << endl;
+        system("pause");
+        return;
+    }
+    while (getline(inFile, acc, ',')) {
+        getline(inFile, name, ',');
+        getline(inFile, pin, ',');
+        getline(inFile, phone, ',');
+        getline(inFile, balance); 
+
+        if (acc == searchAcc && phone == searchPhone) {
+            cout << "\n-------------------------------------" << endl;
+            cout << " Verification Successful!" << endl;
+            cout << " Hello, " << name << endl;
+            cout << " Your PIN is: " << pin << endl;
+            cout << "-------------------------------------" << endl;
+            found = true;
+            break; 
+        }
+    }
+
+    if (!found) {
+        cout << "\nError: Account Number and Phone Number do not match!" << endl;
+    }
+
+    inFile.close();
+    cout << "\n";
+    system("pause"); 
 }
 
 // 2. UPDATED LOGIN 

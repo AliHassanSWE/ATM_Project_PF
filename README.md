@@ -52,6 +52,11 @@ You will notice that `users.csv` and `.exe` files are missing from this reposito
 1.  **`users.csv`**: Ignored for security. Your local machine will store your own private data separate from the public code. Means when different user use this project
 they will not see others csv file they will see their own csv file.
 3.  **`.exe`**: Ignored to force a fresh compilation on your system, preventing errors from mismatched file versions.
+###  Security & Account Recovery
+* **Forgot PIN Feature:** Added a secure way for users to recover their login credentials.
+    * Users must verify their identity by providing their **Account Number** and **Registered Phone Number**.
+    * If the data matches the database, the current PIN is revealed.
+    
    ==========<<<<<<<===================
 ##  How to Run
 
