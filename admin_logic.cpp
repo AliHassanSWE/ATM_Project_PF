@@ -11,13 +11,14 @@ void adminLogin() {
 void adminMenu() {
     int choice;
     do {
-        cout << "\n--- ADMIN DASHBOARD ---\n1. View All users\n2. Search user\n3. Delete user\n4. Edit user account\n0. Logout\n MAKE Your Choice: ";
+        cout << "\n--- ADMIN DASHBOARD ---\n1. View All users\n2. Search user\n3. Delete user\n4. Edit user account\n5. Reset User PIN\n0. Logout\n MAKE Your Choice: ";
         cin >> choice;
         switch(choice) {
             case 1: viewAllUsers(); break;
             case 2: searchUser(); break;
             case 3: deleteUser(); break;
             case 4: editUser(); break;
+            case 5: resetUserPin(); break;
         }
     } while (choice != 0);
 }
@@ -125,6 +126,58 @@ void editUser() {
         cout << "\nERROR: Account Number not found in database." << endl;
     }
 }
+// Paste this at the bottom of admin_logic.cpp
 
+void resetUserPin() {
+    string targetAcc, newPin;
+    string acc, name, pin, phone, balance;
+    bool found = false;
+
+    cout << "\n--- ADMIN: RESET USER PIN ---" << endl;
+    cout << "Enter Account Number to Reset: ";
+    cin >> targetAcc;
+
+    ifstream inFile("users.csv");
+    ofstream outFile("temp.csv");
+
+    if (!inFile || !outFile) {
+        cout << "Error opening files!" << endl;
+        return;
+    }
+
+    // Read file line by line
+    while (getline(inFile, acc, ',')) {
+        getline(inFile, name, ',');
+        getline(inFile, pin, ',');
+        getline(inFile, phone, ',');
+        getline(inFile, balance); // Read rest of line
+
+        if (acc == targetAcc) {
+            cout << "User Found: " << name << endl;
+            cout << "Current PIN: " << pin << endl;
+            cout << "Enter NEW PIN for this user: ";
+            cin >> newPin;
+            
+            // Write the new data with the UPDATED PIN
+            outFile << acc << "," << name << "," << newPin << "," << phone << "," << balance << endl;
+            found = true;
+            cout << "PIN Reset Successfully!" << endl;
+        } else {
+            // Write the old data exactly as it was
+            outFile << acc << "," << name << "," << pin << "," << phone << "," << balance << endl;
+        }
+    }
+
+    inFile.close();
+    outFile.close();
+
+    remove("users.csv");
+    rename("temp.csv", "users.csv");
+
+    if (!found) {
+        cout << "Account not found!" << endl;
+    }
+    system("pause");
+}
 
 //read the readme.txt or readme.md file to run the project properly

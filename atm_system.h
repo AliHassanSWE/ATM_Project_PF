@@ -30,6 +30,7 @@ void viewAllUsers();
 void searchUser();
 void deleteUser();
 void editUser();
+void resetUserPin();
 
 // Helper Functions
 void updateBalanceInFile(string targetAcc, int newBalance);
