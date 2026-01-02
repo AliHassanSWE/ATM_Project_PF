@@ -2,9 +2,9 @@
 
 A complete console-based ATM Management System built in C++ that work like  real-world banking operations. This project uses file handling (CSV) to store user data permanently and features distinct panels for Users and Administrators.
 
-##======§§§§§§§§§=========
+####  ======§§§§§§§§§=========
 
-## 🔗 Student Information
+##  Student Information
 
 * **Name:** Ali Hassaan
 * **Section:** BSCS_**A** (Morning)
@@ -12,7 +12,7 @@ A complete console-based ATM Management System built in C++ that work like  real
 * **Instructor:** Dr. Nauman Riaz
 * **Course:** Programming Fundamentals (CS-102)
 
-##=======•==•====•==•=======
+###  =======•==•====•==•=======
 
 ##  Project Overview
 
@@ -25,13 +25,15 @@ This project demonstrates core programming concepts including **File I/O**, **Fu
 * **Forgot PIN:** Logic to reset security credentials securely.
 * **Transactions:** Deposit and Withdraw funds with real-time balance updates.
 * **Account Management:** Users can view their details and update their profiles.
+* - **Forgot PIN and  Recovery:** Allows users to recover their PIN by verifying their Account Number and registered Phone Number against the database.
 
 #### Admin Panel
 * **Dashboard:** View all registered users in the database.
 * **Edit User:** Admins can modify User Names, PINs, and Phone Numbers.
 * **Search & Delete:** specific tools to manage database records by Account Number.
+* - **Admin PIN Reset:** A secure administrative tool that allows the admin to search for a user by Account Number and manually assign a new PIN in the database.
 
-=========°°°==========
+####  =========°°°==========
 
 ##  Data Storage (CSV Structure)
 
@@ -57,7 +59,7 @@ they will not see others csv file they will see their own csv file.
     * Users must verify their identity by providing their **Account Number** and **Registered Phone Number**.
     * If the data matches the database, the current PIN is revealed.
     
-   ==========<<<<<<<===================
+ ####  ==========<<<<<<<===================
 ##  How to Run
 
 This project consists of multiple C++ source files (`main.cpp`, `admin_logic.cpp`, `user_logic.cpp`, `helper_logic.cpp`) that need to be linked and compiled together.
@@ -71,7 +73,7 @@ Included in the repository is a Windows Batch file named `run.bat`. This script 
     * Clean up old build files.
     * Launch the `ATM_System.exe` immediately.
     * 
-##===========^^^^==========
+####  ===========^^^^==========
      
 ###  Method 2: Manual Compilation (Terminal)
 If you wish to compile the code manually via VS Code Terminal or Command Prompt, use the following command to link all logic files:
@@ -83,7 +85,7 @@ Copy the block below, paste it into your terminal, and press enter.
 g++ main.cpp admin_logic.cpp user_logic.cpp helper_logic.cpp -o ATM_System
 ```
 
-2. ##(Important)
+2. ##  (Important)
 3. After that, run the project with this command:
 
 ```bash
