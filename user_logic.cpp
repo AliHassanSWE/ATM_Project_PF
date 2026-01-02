@@ -1,5 +1,11 @@
 #include "atm_system.h"
-
+bool isNumeric(string s) {
+    if (s.empty()) return false;
+    for (char c : s) {
+        if (!isdigit(c)) return false;
+    }
+    return true;
+}
 void signup() {
     string name, pin, phone, accountNum;
     int initialBalance;
@@ -9,8 +15,17 @@ void signup() {
     cout << "Enter FULL Name: "; 
     cin.ignore();
     getline(cin, name);
-    cout << "Create 4-digit PIN: "; cin >> pin;
-    cout << "Enter Phone: "; cin >> phone;
+    do {
+        cout << "Create 4-digit PIN (Numbers only): ";
+        cin >> pin;
+        
+        if (!isNumeric(pin) || pin.length() != 4) {
+            cout << "Error: PIN must be exactly 4 digits! Try again.\n";
+        }
+    } while (!isNumeric(pin) || pin.length() != 4);
+  
+
+    cout << "Enter Phone: "; cin >> phone; 
     do {
     cout << "Enter Initial Deposit: ";
     if (!(cin >> initialBalance)) { 
