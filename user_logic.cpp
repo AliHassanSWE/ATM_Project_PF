@@ -83,8 +83,8 @@ void login() {
     const int MAX_ATTEMPTS = 5;
 
     while (attempts < MAX_ATTEMPTS) {
-        cout << "====================================";
-        cout << "\n====CUSTOMER LOGIN ====" << endl;
+        cout << "=====================================";
+        cout << "\n    ==== CUSTOMER LOGIN ====       " << endl;
         cout << "=====================================" << endl;
         cout << "Enter Account Number: "; cin >> inputAcc;
         cout << "Enter PIN (Attempt " << (attempts + 1) << " of " << MAX_ATTEMPTS << "): "; cin >> inputPin;
@@ -131,14 +131,32 @@ void userMenu(string accNum, string name, string pin, string phone, int balance)
         cout << "\n=========================" << endl;
         cout << "\n****** USER MENU ********" << endl;
         cout << "=========================" << endl;
-        cout << "\nWelcome " << name << "!" << endl;
-        cout << "1. Check Balance\n2. Withdraw Amount \n3. Deposit Cash\n0. Logout\nChoice: ";
+        cout << "\n  Welcome <<< " << name << " >>>>" << endl;
+        cout << "\n1. Check Balance\n2. Withdraw Amount \n3. Deposit Cash\n0. Logout\nChoice: ";
         cin >> choice;
         if (choice == 1) cout << "Balance: " << balance << endl;
-        else if (choice == 2) {
-            cout << "Amount: "; cin >> amount;
-            if (amount <= balance) { balance -= amount; updateBalanceInFile(accNum, balance); }
-        } else if (choice == 3) {
+       
+       else if (choice == 2) {
+            cout << "Enter Amount to Withdraw: "; 
+            cin >> amount;
+            
+            if (amount > balance) {
+                cout << "\nERROR: Insufficient Balance! You only have " << balance << endl;
+            } else if (amount <= 0) {
+                 cout << "\nERROR: Invalid Amount!" << endl;
+            } else {
+                balance -= amount; 
+                updateBalanceInFile(accNum, balance); 
+                
+                // Success Messages
+                cout << "\n-----------------------------------" << endl;
+                cout << "   CONGRATULATION: Withdraw Successful!   " << endl;
+                cout << "-------------------------------------" << endl;
+                cout << "New Balance: " << balance << endl;
+            }
+        }
+       
+        else if (choice == 3) {
             cout << "Amount: "; cin >> amount;
             balance += amount; updateBalanceInFile(accNum, balance);
         }
