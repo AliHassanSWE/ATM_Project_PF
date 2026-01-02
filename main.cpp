@@ -34,8 +34,10 @@ int main() {
             case 1: login(); break;
             case 2: signup(); break;
             case 3: adminLogin(); break;
-            case 4: forgotPin(); break;
-            case 0: 
+            case 4: forgotPin(); break; 
+    cout << "\nThank you for using our ATM System.\n";
+    cout << "Have a wonderful day!\n";
+    exit(0);
               cout << "Exiting... Goodbye!\n";
             default: 
                 cout << "Invalid choice! Please try again.\n";
