@@ -2,8 +2,7 @@
 
 // Define Global Variables once here
 string fileName = "users.csv";
-string adminUser = "admin";
-string adminPass = "admin123";
+
 
 int main() {
     srand(time(0)); 

@@ -14,6 +14,8 @@ using namespace std;
 extern string fileName;
 extern string adminUser;
 extern string adminPass;
+const string ADMIN_USER = "admin";
+const string ADMIN_PASS = "admin123";
 
 // Menu/Main Functions
 void signup();

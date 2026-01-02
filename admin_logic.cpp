@@ -2,9 +2,9 @@
 
 void adminLogin() {
     string u, p;
-    cout << "\n--- ADMIN LOGIN ---\nUsername: "; cin >> u;
+    cout << "\n----------- ADMIN LOGIN -----------\nUsername: "; cin >> u;
     cout << "Password: "; cin >> p;
-    if(u == adminUser && p == adminPass) adminMenu();
+    if(u == ADMIN_USER && p == ADMIN_PASS) adminMenu();
     else cout << "Access Denied!\n";
 }
 

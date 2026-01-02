@@ -28,6 +28,9 @@ This project demonstrates core programming concepts including **File I/O**, **Fu
 * - **Forgot PIN and  Recovery:** Allows users to recover their PIN by verifying their Account Number and registered Phone Number against the database.
 
 #### Admin Panel
+> **Note:** For testing purposes, use the following default credentials to access the Admin Panel:
+> - **Username:** `admin`
+> - **Password:** `admin123`
 * **Dashboard:** View all registered users in the database.
 * **Edit User:** Admins can modify User Names, PINs, and Phone Numbers.
 * **Search & Delete:** specific tools to manage database records by Account Number.
