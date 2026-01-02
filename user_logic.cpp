@@ -42,7 +42,17 @@ void signup() {
     getline(cin, name);
     cout << "Create 4-digit PIN: "; cin >> pin;
     cout << "Enter Phone: "; cin >> phone;
-    cout << "Initial Deposit: "; cin >> initialBalance;
+    do {
+    cout << "Enter Initial Deposit: ";
+    if (!(cin >> initialBalance)) { 
+        cin.clear(); cin.ignore(10000, '\n');
+        initialBalance = -1; 
+    }
+    
+    if (initialBalance < 0) {
+        cout << "Error: Balance cannot be negative. Try again.\n";
+    }
+} while (initialBalance < 0);
 
     ofstream file(fileName.c_str(), ios::app);
     if (!file) {
