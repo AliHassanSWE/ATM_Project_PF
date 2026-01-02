@@ -1,36 +1,5 @@
 #include "atm_system.h"
 
-void showMainMenu() {
-    int choice;
-    do {
-        cout << "\n====================================\n";
-        cout << "      ATM MANAGEMENT SYSTEM         \n";
-        cout << "====================================\n";
-        cout << "1. Customer Login\n";
-        cout << "2. Create New Account (Signup)\n";
-        cout << "3. Admin Login\n";
-        cout << "4. Forgot PIN\n";
-        cout << "0. Exit\n";
-        cout << "Enter your choice: ";
-if (!(cin >> choice)) {
-    cout << "Please enter numbers only!" << endl;
-    cin.clear();
-    cin.ignore(10000, '\n'); 
-    system("pause");
-    continue; 
-}
-
-        switch (choice) {
-            case 1: login(); break;
-            case 2: signup(); break;
-            case 3: adminLogin(); break;
-            case 4: forgotPin(); break;
-            case 0: cout << "Exiting... Goodbye!\n"; break;
-            default: cout << "Invalid choice!\n";
-        }
-    } while (choice != 0);
-}
-
 void signup() {
     string name, pin, phone, accountNum;
     int initialBalance;

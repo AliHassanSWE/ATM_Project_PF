@@ -16,7 +16,6 @@ extern string adminUser;
 extern string adminPass;
 
 // Menu/Main Functions
-void showMainMenu();
 void signup();
 void login();
 void adminLogin();
