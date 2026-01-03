@@ -75,7 +75,35 @@ Included in the repository is a Windows Batch file named `run.bat`. This script 
     * Compile all `.cpp` files using `g++`.
     * Clean up old build files.
     * Launch the `ATM_System.exe` immediately.
-    * 
+###  you just need to double tab this file:
+
+
+<img width="750" height="600" alt="image" src="https://github.com/user-attachments/assets/a7b980c4-50bd-43a3-bad7-c76ddc6be8e5" />
+
+
+
+###  It will automatically compile and run the program and show this screeen:
+
+
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/036c9bcf-5c32-40d6-a538-f8a0c18c99b6" />
+
+
+
+###  when you enter any key it show main menu and for admin login username is "admin" Password "admin123"
+
+
+
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/132889ce-1a63-4107-bc14-afcfc0e0096f" />
+
+
+
+###For customer login you need to type id which is assigned by rand function in csv and then enter pin you already assign during sinup
+if it will be verified it will show you customer login:
+
+
+<img width="650" height="501" alt="image" src="https://github.com/user-attachments/assets/e95dd9cd-3f9d-4b4b-872f-6cf5adc491a2" />
+
+
 ####  ===========^^^^==========
      
 ###  Method 2: Manual Compilation (Terminal)
@@ -94,4 +122,32 @@ g++ main.cpp admin_logic.cpp user_logic.cpp helper_logic.cpp -o ATM_System
 ```bash
 ./ATM_System.exe
 ```
+
+### how to paste the link to run:
+
+
+<img width="1907" height="960" alt="image" src="https://github.com/user-attachments/assets/61c389d7-84e9-4c79-9746-0614c2ca8a51" />  
+
+
+
+###  After pasting link press enter to run it will look like imges which is below:
+
+
+<img width="1896" height="759" alt="image" src="https://github.com/user-attachments/assets/cc6cde42-c8d3-411f-a9c4-032d50240b88" />
+
+
+
+###  when you enter any key it will show main menu like this:
+
+
+<img width="903" height="407" alt="image" src="https://github.com/user-attachments/assets/ad1033e3-07c9-45dc-a7ee-92807e2ce18d" />
+
+
+###  The 'CSV' file data looks like which i mentioned above:
+
+
+<img width="1407" height="678" alt="image" src="https://github.com/user-attachments/assets/972c353c-3c22-417e-a622-23bac8831d46" />
+
+
+
 
