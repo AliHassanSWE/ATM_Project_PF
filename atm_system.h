@@ -38,4 +38,4 @@ void updateBalanceInFile(string targetAcc, int newBalance);
 
 #endif
 
-//read the readme.txt or readme.md file to run the project properly
+// read the readme.txt or readme.md file to run the project properly
