@@ -34,13 +34,20 @@ void viewAllUsers() {
 
 void searchUser() {
     string searchAcc, f_acc, line;
+    bool found = false;
     cout << "Enter Acc: "; cin >> searchAcc;
     ifstream file(fileName.c_str());
     while (getline(file, f_acc, ',')) {
         getline(file, line); 
-        if (f_acc == searchAcc) cout << "Found: " << f_acc << "," << line << endl;
+        if (f_acc == searchAcc) {
+            cout << "Found: " << f_acc << "," << line << endl;
+         found = true;
+         }
     }
-    file.close();
+    file.close();{
+        cout << "!!! ERROR: User with ID " << searchAcc << " was not found in the database. !!!" << endl;
+    }
+
 }
 
 void deleteUser() {

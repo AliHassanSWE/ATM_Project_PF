@@ -35,7 +35,15 @@ void resetUserPin();
 
 // Helper Functions
 void updateBalanceInFile(string targetAcc, int newBalance);
-
+/*
+CSV NUMBERINGING AND FORMAT:
+ * DATABASE FORMAT (users.csv):
+ * Column 1: Account Number (Unique ID)
+ * Column 2: Full Name
+ * Column 3: PIN Code
+ * Column 4: Phone Number
+ * Column 5: Current Balance
+ */
 #endif
 
 // read the readme.txt or readme.md file to run the project properly
