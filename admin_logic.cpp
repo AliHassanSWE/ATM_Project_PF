@@ -1,5 +1,6 @@
 #include "atm_system.h"
 
+// Function: adminLogin
 void adminLogin() {
     string u, p;
     cout << "\n----------- ADMIN LOGIN -----------\nUsername: "; cin >> u;
@@ -8,6 +9,7 @@ void adminLogin() {
     else cout << "Access Denied!\n";
 }
 
+// Function: adminMenu
 void adminMenu() {
     int choice;
     do {
@@ -24,6 +26,7 @@ void adminMenu() {
         }
     } while (choice != 0);
 }
+// Function: viewAllUsers
 
 void viewAllUsers() {
     ifstream file(fileName.c_str());
@@ -32,6 +35,7 @@ void viewAllUsers() {
     file.close();
 }
 
+// Function: searchUser
 void searchUser() {
     string searchAcc, f_acc, line;
     bool found = false;
@@ -49,7 +53,7 @@ void searchUser() {
     }
 
 }
-
+// Function: deleteUser
 void deleteUser() {
     string targetAcc, f_acc, f_rest;
     bool found = false; // 1. Create a flag to track success
@@ -135,7 +139,7 @@ void editUser() {
         cout << "\nERROR: Account Number not found in database." << endl;
     }
 }
-// Paste this at the bottom of admin_logic.cpp
+
 
 void resetUserPin() {
     string targetAcc, newPin;

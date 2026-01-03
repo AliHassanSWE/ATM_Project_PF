@@ -1,5 +1,6 @@
 #include "atm_system.h"
 
+// Function: updateBalanceInFile
 void updateBalanceInFile(string targetAcc, int newBalance)
 {
     ifstream inFile(fileName.c_str());
@@ -24,7 +25,7 @@ void updateBalanceInFile(string targetAcc, int newBalance)
     }
     inFile.close();
     outFile.close();
-    remove(fileName.c_str());
+    remove(fileName.c_str()); 
     rename("temp.csv", fileName.c_str());
 }
 

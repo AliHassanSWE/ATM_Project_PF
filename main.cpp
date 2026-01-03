@@ -1,12 +1,13 @@
-#include "atm_system.h"
+#include "atm_system.h"  //It Links this file to the shared function list
 
 // Define Global Variables once here
 string fileName = "users.csv";
-
+// Function: main
 int main()
 {
-    srand(time(0));
-    system("cls"); 
+    srand(time(0));  // It Seeds the random generator with the current time to make  unique data
+    system("cls");  // Refreshes the screen
+    // 1. Display the Welcome / Splash Screen 
     cout << "\n\n";
     cout << "\t=============================================" << endl;
     cout << "\t||                                         ||" << endl;
@@ -18,7 +19,7 @@ int main()
     cout << "\t||   INSTRUCTOR:     Dr. Nauman Riaz       ||" << endl;
     cout << "\t||                                         ||" << endl;
     cout << "\t=============================================" << endl;
-    cout << "\n\n\t   >>> Press Enter to Start Session <<<   ";
+    cout << "\n\n\t   >>> Press Enter to Start Session <<<   ";   // It Wait for the user to press Enter before clearing the screen
     cin.get();
     int choice;
     do
@@ -34,11 +35,11 @@ int main()
         cout << " 0. Exit\n";
         cout << " Enter your choice: ";
 
-        // Input Validation (To prevent infinite loop if user enters letters)
+        // this is Input Validation To prevent infinite loop if user enters letters
         if (!(cin >> choice))
         {
             cout << "Please enter numbers only!" << endl;
-            cin.clear();
+            cin.clear();  // Resets the "fail" state of cin so it can accept input again
             cin.ignore(1000, '\n');
             system("pause");
             choice = -1; // Force loop to restart
