@@ -6,6 +6,20 @@ string fileName = "users.csv";
 int main()
 {
     srand(time(0));
+    system("cls"); 
+    cout << "\n\n";
+    cout << "\t=============================================" << endl;
+    cout << "\t||                                         ||" << endl;
+    cout << "\t||      welcome to  ATM  SYSTEM            ||" << endl;
+    cout << "\t||                                         ||" << endl;
+    cout << "\t=============================================" << endl;
+    cout << "\t||                                         ||" << endl;
+    cout << "\t||   DEVELOPED BY:   Ali Hassan            ||" << endl;
+    cout << "\t||   INSTRUCTOR:     Dr. Nauman Riaz       ||" << endl;
+    cout << "\t||                                         ||" << endl;
+    cout << "\t=============================================" << endl;
+    cout << "\n\n\t   >>> Press Enter to Start Session <<<   ";
+    cin.get();
     int choice;
     do
     {
@@ -13,7 +27,7 @@ int main()
         cout << "\n=======================================\n";
         cout << "        ATM MANAGEMENT SYSTEM          \n";
         cout << "=======================================\n";
-        cout << " 1. Customer Login\n";
+        cout << "\n 1. Customer Login\n";
         cout << " 2. Create New Account (Signup)\n";
         cout << " 3. Admin Login\n";
         cout << " 4. Forgot PIN\n";
